@@ -20,3 +20,22 @@ def state_after_action(state, action_index):
 
 b= state_after_action([0,1],1)
 
+#%%
+
+(0 if state[0] < 0 else (WIDTH - 1 if state[0] > WIDTH - 1 else state[0]))
+
+#%%
+
+import tkinter as tk
+
+
+
+root = tk.Tk()
+canvas = tk.Canvas(root,width=200,height=200,bg="white")
+canvas.grid()
+firstRect = canvas.create_rectangle(50,0,100,100,fill="red")
+secondRect = canvas.create_rectangle(5,5,15,15,fill="blue")
+canvas.tag_raise(firstRect)
+
+root.mainloop() #
+
